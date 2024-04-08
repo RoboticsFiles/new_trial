@@ -6,6 +6,7 @@ body{
     flex-wrap: wrap;
     justify-content: space-evenly; /* Distribute items evenly along the main axis */
     align-content: space-evenly; /* Distribute flex lines evenly */
+    touch-action: pan-y;
 }
 
 .container{
@@ -21,11 +22,4 @@ body{
 
 #para{
     height: 10px;
-}
-
-html, body {
-    touch-action: manipulation; /* Disable double-tap zoom on mobile devices */
-    user-select: none; /* Prevent text selection */
-    -ms-content-zooming: none; /* Disable zooming in IE10 and later */
-    zoom: 1; /* Disable zooming in older versions of IE */
 }
