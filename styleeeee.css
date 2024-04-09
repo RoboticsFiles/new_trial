@@ -1,64 +1,60 @@
 
 
 body{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly; /* Distribute items evenly along the main axis */
-    align-content: space-evenly; /* Distribute flex lines evenly */
-    touch-action: pan-y;
-    padding-top: 130px;
-    font-size: 16px;
-    ling-height: 1.5;
-    transform: scale(2);
-    transform-origin: top left;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Distribute items evenly along the main axis */
+  align-content: space-evenly; /* Distribute flex lines evenly */
+  touch-action: pan-y;
+  padding-top: 130px;
 }
 
-#imageContainer {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between; /* Distribute items evenly along the main axis */
-    gap: 20px; /* Adjust the gap between images */
-    padding: 20px; /* Adjust padding around the container */
+.container{
+  height: 188px;
+  background-color: lightpink;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.img{
+  border-radius: 3px;
 }
 
-.img {
-    width: 50%; /* calc(50% - 10px); Calculate width for two images with gap */
-    border-radius: 5px; /* Adjust border radius for images */
+#para{
+  height: 10px;
 }
-
 
 /* Header styles */
 header {
-    background-color: #333;
-    color: white;
-    padding: 30px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right:0;
-    width: 100%;
-    z-index: 1000;
-  }
-  
-  .header-content {
-    display: flex;
-    align-items: center;
-  }
-  
-  .menu-icon {
-    cursor: pointer;
-  }
-  
-  .bar {
-    background-color: white;
-    height: 3px;
-    width: 20px;
-    margin: 3px 0;
-  }
-  
-  .app-name {
-    margin-left: 100px;
-    margin-right: 10px; /* Adjust the margin to bring it closer to the menu icon */
-    font-size: 24px;
-  }
-  
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.bar {
+  background-color: white;
+  height: 3px;
+  width: 20px;
+  margin: 3px 0;
+}
+
+.app-name {
+  margin-left: 100px;
+  margin-right: 10px; /* Adjust the margin to bring it closer to the menu icon */
+  font-size: 24px;
+}
