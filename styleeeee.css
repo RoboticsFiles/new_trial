@@ -9,6 +9,8 @@ body{
     padding-top: 130px;
     font-size: 16px;
     ling-height: 1.5;
+    transform: scale(2);
+    transform-origin: top left;
 }
 
 #imageContainer {
