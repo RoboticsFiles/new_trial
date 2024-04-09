@@ -1,0 +1,31 @@
+[
+    {
+      "path": "Nspecific/1.jfif",
+      "types": ["character", "boy", "with_car","snow","morning"]
+    },
+    {
+      "path": "Nspecific/2.jfif",
+      "types": ["character", "boy","evening"]
+    },
+    {
+        "path": "Nspecific/3.jfif",
+        "types": ["character", "boy", "with_car","snow","morning"]
+    },
+    {
+        "path": "Nspecific/4.jfif",
+        "types": ["character", "boy", "with_car","snow","morning"]
+    },
+    {
+        "path": "Nspecific/5.jfif",
+        "types": ["character", "boy", "with_car","snow","morning"]
+    },
+    {
+        "path": "Nspecific/6.jfif",
+        "types": ["character", "boy", "with_car","snow","morning"]
+    },
+    {
+        "path": "Nspecific/7.jfif",
+        "types": ["character", "boy", "with_car","evening"]
+    }
+  ]
+  
