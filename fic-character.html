@@ -2,29 +2,50 @@
 <html lang="en">
 <head>
   <title>The Application</title>
-  <link rel="stylesheet" href="styleeeee.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div id="imageContainer"></div>
 
-  <header id="myHeader">
-    <div class="header-content">
-      <div class="menu-icon" onclick="toggleMenu()">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
-      <h1 class="app-name">The Application</h1>
-    </div>
-  </header>
+    <script>
+  function imageExists(url, callback) {
+    var img = new Image();
+    img.onload = function() {
+      callback(true);
+    };
+    img.onerror = function() {
+      callback(false);
+    };
+    img.src = url;
+  }
+  let i = 1;
 
-  <div id="imageContainer">
-    <!-- Images will be displayed here -->
-  </div>
+  function loadImage() {
+      var imageUrl = `fic-character/${i}.jfif`; 
+      imageExists(imageUrl, function(exists) {
+          if (exists) {
+              var img = document.createElement("img");
+              img.src = imageUrl;
+              img.style.width = "47%"
+              img.style.marginLeft = "1.5%"
+              img.style.marginTop = "2px"
+              img.style.borderRadius = "3px"
+              document.getElementById("imageContainer").appendChild(img);
+              i++;
 
-  <script src="testing.js"></script>
+              img.loading = "lazy";
+              loadImage();
+          } else {
+              console.log("Image not found");
+              var para = document.getElementById('para');
+              para.textContent = 'Done';
+
+          }
+      });
+  }
+  
+  loadImage();
+       
+    </script>
 </body>
 </html>
