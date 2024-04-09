@@ -6,49 +6,21 @@
 </head>
 <body>
 
+  <header id="myHeader">
+    <div class="header-content">
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <h1 class="app-name">The Application</h1>
+    </div>
+  </header>
+
   <div id="imageContainer">
+    <!-- Images will be displayed here -->
+  </div>̥
 
-  </div>
-    <script>
-  function imageExists(url, callback) {
-    var img = new Image();
-    img.onload = function() {
-      callback(true);
-    };
-    img.onerror = function() {
-      callback(false);
-    };
-    img.src = url;
-  }
-  let i = 1;
-
-  function loadImage() {
-      var imageUrl = `Fic-character/${i}.jfif`; 
-      imageExists(imageUrl, function(exists) {
-          if (exists) {
-              var img = document.createElement("img");
-              img.src = imageUrl;
-              img.style.width = "47%"
-              img.style.marginLeft = "1.5%"
-              img.style.marginTop = "2px"
-              img.style.borderRadius = "3px"
-              document.getElementById("imageContainer").appendChild(img);
-              i++;
-
-              img.loading = "lazy";
-              loadImage();
-          } else {
-              console.log("Image not found");
-              var para = document.getElementById('para');
-              para.textContent = 'Done';
-
-          }
-      });
-  }
-  
-  loadImage();
-       
-    </script>
+  <script src="testing.js"></script>
 </body>
 </html>
-
