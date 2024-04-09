@@ -11,9 +11,9 @@ body{
 
 #imageContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Adjust the minmax value as needed */
-    gap: 10px; /* Adjust the gap between images */
-    padding: 10px; /* Optional padding around the grid */
+    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)); /* Adjust the percentage as needed */
+    gap: 5%; /* Adjust the gap between images */
+    padding: 5%; /* Optional padding around the grid */
 }
 
 .img {
@@ -21,6 +21,7 @@ body{
     height: auto;
     border-radius: 3px;
 }
+
 
 /* Header styles */
 header {
