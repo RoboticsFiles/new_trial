@@ -13,8 +13,8 @@ function loadImage(types) {
                 var img = document.createElement("img");
                 img.src = image.path;
                 img.style.width = "47%";
-                img.style.marginLeft = "1.5%";
-                img.style.marginTop = "2px";
+                img.style.marginLeft = "2%";
+                img.style.marginTop = "1.5%";
                 img.style.borderRadius = "3px";
                 document.getElementById("imageContainer").appendChild(img);
             }
@@ -24,4 +24,3 @@ function loadImage(types) {
 
 // Call loadImage function with an array of selected types
 loadImage(["character","with_car"]);
-
