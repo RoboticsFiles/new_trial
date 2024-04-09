@@ -1,0 +1,43 @@
+[
+    {
+      "path": "Images/1.jfif",
+      "types": ["", "Boys", "With_Car","Snow","Morning"]
+    },
+    {
+      "path": "Images/2.jfif",
+      "types": ["", "Boys","Evening"]
+    },
+    {
+        "path": "Images/3.jfif",
+        "types": ["", "Boys", "With_Car","Snow","Morning"]
+    },
+    {
+        "path": "Images/Naruto.jfif",
+        "types": ["Anime", "Boys"]
+    },
+    {
+        "path": "Images/4.jfif",
+        "types": ["", "Boys", "With_Car","Snow","Morning"]
+    },
+    {
+        "path": "Images/batman.jfif",
+        "types": ["Anime", "Boys"]
+    },
+    {
+        "path": "Images/5.jfif",
+        "types": ["", "Boys", "With_Car","Snow","Morning"]
+    },
+    {
+        "path": "Images/6.jfif",
+        "types": ["", "Boys", "With_Car","Snow","Morning"]
+    },
+    {
+        "path": "Images/7.jfif",
+        "types": ["", "Boys", "With_Car","Evening"]
+    },
+    {
+        "path": "Images/2t.jfif",
+        "types": ["Anime", "Boys"]
+    }
+  ]
+  

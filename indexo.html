@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>The Application</title>
+  <link rel="stylesheet" href="styleo.css">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+
+<body>
+
+  <header id="myHeader">
+    <div class="header-content">
+      <div class="menu-icon" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <h1 class="app-name">The Application</h1>
+    </div>
+  </header>
+
+  <!-- Side Navigation Menu -->
+  <div class="sidenav" id="mySidenav">
+    <button class="category" onclick="toggleCategoryColor(event)">Boys</button>
+    <button class="category" onclick="toggleCategoryColor(event)">Morning</button>
+    <button class="category" onclick="toggleCategoryColor(event)">Evening</button>
+    <button class="category" onclick="toggleCategoryColor(event)">With_Car</button>
+    <button class="category" onclick="toggleCategoryColor(event)">Snow</button>
+    <button class="category" onclick="toggleCategoryColor(event)">Anime</button>
+
+    <button id="apply-btn" onclick="applyCategories()">Apply</button>
+  
+  </div>
+
+  <div id="imageContainer">
+    <!-- Images will be displayed here -->
+  </div>
+
+  <script src="scripto.js"></script>
+</body>
+</html>

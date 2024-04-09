@@ -1,0 +1,134 @@
+/* Side Navigation Menu Styles */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color:rgb(245, 245, 245);
+  overflow-x: hidden;
+  transition: 0.4s;
+  padding-top: 60px;
+  padding-top: 200px;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  justify-content: space-evenly;
+}
+
+.category-div{
+  height: 100%;
+  width: 100%;
+}
+.category{
+  border: none;
+  width: 35%;
+  height: 15%;
+  margin-top: 30px;
+  font-size: 50px;
+  border-radius: 10px;
+  background-color: white;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}  
+
+.selected {
+  background-color: #23bdad;
+}
+
+#apply-btn{
+  border: none;
+  width: 35%;
+  height: 15%;
+  margin-top: 40px;
+  font-size: 40px;
+  border-radius: 10px;
+  background-color: grey;
+  box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+}
+
+
+.sidenav.open {
+  width: 80%;
+}
+
+
+/* Close Button for Side Navigation Menu */
+.closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+
+body{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly; /* Distribute items evenly along the main axis */
+  align-content: space-evenly; /* Distribute flex lines evenly */
+  touch-action: pan-y;
+  padding-top: 163px;
+}
+
+.container{
+  height: 188px;
+  background-color: lightpink;
+  display: flex;
+  justify-content: center;
+}
+.img{
+  border-radius: 3px;
+}
+
+/* Header styles */
+header {
+  background-color: #333;
+  color: white;
+  padding: 30px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right:0;
+  width: 100%;
+  height: 120px;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-color: rgb(228, 228, 228);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+}      
+
+.menu-icon {
+  cursor: pointer;
+}
+
+.bar {
+  background-color: white;
+  height: 10px;
+  width: 70px;
+  margin: 9px 0;
+}
+
+.app-name {
+  margin-left:50px;
+  margin-right: 10px; /* Adjust the margin to bring it closer to the menu icon */
+  font-size: 65px;
+  font-family: "IBM Plex Mono", monospace;
+  font-weight: 500;
+  font-style: normal;
+}
+
+
+
+
