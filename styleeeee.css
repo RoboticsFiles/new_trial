@@ -12,16 +12,16 @@ body{
 }
 
 #imageContainer {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(45%, 1fr)); /* Adjust the percentage as needed */
-    gap: 5%; /* Adjust the gap between images */
-    padding: 5%; /* Optional padding around the grid */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Distribute items evenly along the main axis */
+    gap: 20px; /* Adjust the gap between images */
+    padding: 20px; /* Adjust padding around the container */
 }
 
 .img {
-    width: 100%;
-    height: auto;
-    border-radius: 5px;
+    width: calc(50% - 10px); /* Calculate width for two images with gap */
+    border-radius: 5px; /* Adjust border radius for images */
 }
 
 
