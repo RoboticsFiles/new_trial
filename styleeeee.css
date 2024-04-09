@@ -20,7 +20,7 @@ body{
 }
 
 .img {
-    width: calc(50% - 10px); /* Calculate width for two images with gap */
+    width: 50%; /* calc(50% - 10px); Calculate width for two images with gap */
     border-radius: 5px; /* Adjust border radius for images */
 }
 
