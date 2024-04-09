@@ -6,15 +6,14 @@ body{
   justify-content: space-evenly; /* Distribute items evenly along the main axis */
   align-content: space-evenly; /* Distribute flex lines evenly */
   touch-action: pan-y;
-  padding-top: 130px;
+  padding-top: 163px;
 }
 
 .container{
   height: 188px;
   background-color: lightpink;
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
+  justify-content: center;
 }
 .img{
   border-radius: 3px;
@@ -37,6 +36,10 @@ header {
   align-items: center;
   flex-direction: row;
   width: 100%;
+
+  border-bottom-style: solid;
+  border-bottom-width: 10px;
+  border-bottom-color: rgb(228, 228, 228);
 }
 
 .header-content {
@@ -50,7 +53,7 @@ header {
 
 .bar {
   background-color: white;
-  height: 8px;
+  height: 10px;
   width: 70px;
   margin: 9px 0;
 }
@@ -58,7 +61,7 @@ header {
 .app-name {
   margin-left:50px;
   margin-right: 10px; /* Adjust the margin to bring it closer to the menu icon */
-  font-size: 54px;
+  font-size: 65px;
   font-family: "IBM Plex Mono", monospace;
   font-weight: 500;
   font-style: normal;
