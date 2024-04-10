@@ -69,8 +69,12 @@ function applyCategories() {
   if(selectedCategories.length > 0) {
     console.log(selectedCategories); // Print selected categories array in the console
     loadImage(selectedCategories);
+  } else {
+    // If no categories are selected, load all images
+    loadImage([]);
   }
 }
+
 
 // Modal functionality
 
