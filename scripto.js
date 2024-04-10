@@ -18,9 +18,9 @@ document.addEventListener('click', function(event) {
 
 function loadImageData(callback) {
   fetch('imageDatao.json')
-    .then(response => response.json())
-    .then(data => callback(data))
-    .catch(error => console.error('Error loading image data:', error));
+      .then(response => response.json())
+      .then(data => callback(data))
+      .catch(error => console.error('Error loading image data:', error));
 }
 
 function loadImage(types) {
@@ -28,25 +28,24 @@ function loadImage(types) {
   document.getElementById("imageContainer").innerHTML = "";
 
   loadImageData(function(images) {
-    images.forEach(function(image) {
-      // Check if the image contains all selected types
-      if (types.every(type => image.types.includes(type))) {
-        var img = document.createElement("img");
-        img.src = 'Images/' + image.path; // Update the image path
-        img.style.width = "47%";
-        img.style.marginLeft = "2%";
-        img.style.marginTop = "1.5%";
-        img.style.borderRadius = "3px";
-        img.classList.add('modal-image');
-        img.addEventListener('click', function() {
-          openModal('Images/' + image.path); // Update the image path
-        });
-        document.getElementById("imageContainer").appendChild(img);
-      }
-    });
+      images.forEach(function(image) {
+          // Check if the image contains all selected types
+          if (types.every(type => image.types.includes(type))) {
+              var img = document.createElement("img");
+              img.src = image.path;
+              img.style.width = "47%";
+              img.style.marginLeft = "2%";
+              img.style.marginTop = "1.5%";
+              img.style.borderRadius = "3px";
+              img.classList.add('modal-image'); // Add a class to the image for easier selection
+              img.addEventListener('click', function() {
+                openModal(image.path);
+              });
+              document.getElementById("imageContainer").appendChild(img);
+          }
+      });
   });
 }
-
 
 // Call loadImage function with an array of selected types
 
@@ -69,12 +68,8 @@ function applyCategories() {
   if(selectedCategories.length > 0) {
     console.log(selectedCategories); // Print selected categories array in the console
     loadImage(selectedCategories);
-  } else {
-    // If no categories are selected, load all images
-    loadImage([]);
   }
 }
-
 
 // Modal functionality
 
@@ -103,11 +98,23 @@ function closeModal() {
  
 
 function downloadImage(imagePath) {
-  var filename = imagePath.split('/').pop();
+  var filename = imagePath.split('/').pop(); // Assuming the imagePath is a URL
+  
+  // Create a temporary link element
   var link = document.createElement('a');
+  
+  // Set the href attribute to the image path
   link.href = imagePath;
+  
+  // Set the download attribute to specify the filename
   link.download = filename;
+  
+  // Append the link to the document body
   document.body.appendChild(link);
+  
+  // Trigger a click event on the link to initiate the download
   link.click();
+  
+  // Remove the link from the document body
   document.body.removeChild(link);
 }
