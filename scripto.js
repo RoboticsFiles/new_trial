@@ -1,19 +1,26 @@
+var sidebar = false;
 function toggleMenu() {
   var sidenav = document.getElementById("mySidenav");
   if (sidenav.style.width === "80%") {
+    sidebar = false;
     sidenav.style.width = "0";
   } else {
+    sidebar = true;
     sidenav.style.width = "80%";
   }
 }
 
 document.addEventListener('click', function(event) {
+
   var sidenav = document.getElementById("mySidenav");
   var header = document.getElementById("myHeader");
+
   if (event.target !== sidenav && !sidenav.contains(event.target) && event.target !== header && !header.contains(event.target)) {
       // Click occurred outside the sidebar and header, close it
       sidenav.style.width = "0";
+      sidebar = false;
   }
+
 });
 
 function loadImageData(callback) {
@@ -79,15 +86,25 @@ function openModal(imagePath) {
   var downloadBtn = document.getElementById("downloadBtn");
   var backBtn = document.getElementById("backBtn");
 
-  modal.style.display = "block";
-  modalImg.src = imagePath;
+  if(sidebar === false){
+    setTimeout(function() {
+      // Your code to be executed after the delay
+      modal.style.display = "flex";
+      modal.style.justifyContent = "center";
+      modal.style.alignItems = "center";
+      modal.style.flexDirection = "column"; 
+      modalImg.src = imagePath;
+  }, 20);
+
+  }
 
   downloadBtn.addEventListener('click', function() {
     downloadImage(imagePath);
   });
 
-  backBtn.addEventListener('click', function() {
+  backBtn.addEventListener('click', function() {setTimeout(function() {
     closeModal();
+    }, 20);
   });
 }
 
@@ -97,24 +114,30 @@ function closeModal() {
 }
  
 
-function downloadImage(imagePath) {
-  var filename = imagePath.split('/').pop(); // Assuming the imagePath is a URL
+// function downloadImage(imagePath) {
+//   var filename = imagePath.split('/').pop(); // Assuming the imagePath is a URL
   
-  // Create a temporary link element
-  var link = document.createElement('a');
+//   // Create a temporary link element
+//   var link = document.createElement('a');
   
-  // Set the href attribute to the image path
-  link.href = imagePath;
+//   // Set the href attribute to the image path
+//   link.href = imagePath;
   
-  // Set the download attribute to specify the filename
-  link.download = filename;
+//   // Set the download attribute to specify the filename
+//   link.download = filename;
   
-  // Append the link to the document body
-  document.body.appendChild(link);
+//   // Append the link to the document body
+//   document.body.appendChild(link);
   
-  // Trigger a click event on the link to initiate the download
-  link.click();
+//   // Trigger a click event on the link to initiate the download
+//   link.click();
   
-  // Remove the link from the document body
-  document.body.removeChild(link);
+//   // Remove the link from the document body
+//   document.body.removeChild(link);
+// }
+
+function downloadImage(imagePath){
+  var anchor = document.getElementById("downloadBtn");
+
+  anchor.href = imagePath;
 }
