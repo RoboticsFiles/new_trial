@@ -114,30 +114,25 @@ function closeModal() {
 }
  
 
-// function downloadImage(imagePath) {
-//   var filename = imagePath.split('/').pop(); // Assuming the imagePath is a URL
+function downloadImage(imagePath) {
+  var filename = imagePath.split('/').pop(); // Assuming the imagePath is a URL
   
-//   // Create a temporary link element
-//   var link = document.createElement('a');
+  // Create a temporary link element
+  var link = document.createElement('a');
   
-//   // Set the href attribute to the image path
-//   link.href = imagePath;
+  // Set the href attribute to the image path
+  link.href = imagePath;
   
-//   // Set the download attribute to specify the filename
-//   link.download = filename;
+  // Set the download attribute to specify the filename
+  link.download = filename;
   
-//   // Append the link to the document body
-//   document.body.appendChild(link);
+  // Append the link to the document body
+  document.body.appendChild(link);
   
-//   // Trigger a click event on the link to initiate the download
-//   link.click();
+  // Trigger a click event on the link to initiate the download
+  link.click();
   
-//   // Remove the link from the document body
-//   document.body.removeChild(link);
-// }
-
-function downloadImage(imagePath){
-  var anchor = document.getElementById("downloadBtn");
-
-  anchor.href = imagePath;
+  // Remove the link from the document body
+  document.body.removeChild(link);
 }
+
