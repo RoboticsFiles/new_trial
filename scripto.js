@@ -16,9 +16,6 @@ document.addEventListener('click', function(event) {
   }
 });
 
-
-       
-
 function loadImageData(callback) {
   fetch('imageDatao.json')
       .then(response => response.json())
@@ -40,6 +37,10 @@ function loadImage(types) {
               img.style.marginLeft = "2%";
               img.style.marginTop = "1.5%";
               img.style.borderRadius = "3px";
+              img.classList.add('modal-image'); // Add a class to the image for easier selection
+              img.addEventListener('click', function() {
+                openModal(image.path);
+              });
               document.getElementById("imageContainer").appendChild(img);
           }
       });
@@ -48,21 +49,15 @@ function loadImage(types) {
 
 // Call loadImage function with an array of selected types
 
-  
-
-
-
 let selectedCategories = [];
 
 function toggleCategoryColor(event) {
   event.target.classList.toggle("selected");
 }
 
-
 function applyCategories() {
   selectedCategories = [];
   const buttons = document.querySelectorAll('.category');
-
   
   buttons.forEach(button => {
     if (button.classList.contains('selected')) {
@@ -70,8 +65,56 @@ function applyCategories() {
     }
   });
 
-  if(selectedCategories.length>0){
+  if(selectedCategories.length > 0) {
     console.log(selectedCategories); // Print selected categories array in the console
     loadImage(selectedCategories);
   }
+}
+
+// Modal functionality
+
+function openModal(imagePath) {
+  var modal = document.getElementById("myModal");
+  var modalImg = document.getElementById("img01");
+  var downloadBtn = document.getElementById("downloadBtn");
+  var backBtn = document.getElementById("backBtn");
+
+  modal.style.display = "block";
+  modalImg.src = imagePath;
+
+  downloadBtn.addEventListener('click', function() {
+    downloadImage(imagePath);
+  });
+
+  backBtn.addEventListener('click', function() {
+    closeModal();
+  });
+}
+
+function closeModal() {
+  var modal = document.getElementById("myModal");
+  modal.style.display = "none";
+}
+ 
+
+function downloadImage(imagePath) {
+  var filename = imagePath.split('/').pop(); // Assuming the imagePath is a URL
+  
+  // Create a temporary link element
+  var link = document.createElement('a');
+  
+  // Set the href attribute to the image path
+  link.href = imagePath;
+  
+  // Set the download attribute to specify the filename
+  link.download = filename;
+  
+  // Append the link to the document body
+  document.body.appendChild(link);
+  
+  // Trigger a click event on the link to initiate the download
+  link.click();
+  
+  // Remove the link from the document body
+  document.body.removeChild(link);
 }
