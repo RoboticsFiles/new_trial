@@ -43,15 +43,17 @@
   <script src="scripto.js"></script>
 
   <!-- Modal -->
-  <div id="myModal" class="modal">
-    <div id="modal-content-container">
-      <img class="modal-content" id="img01">
-      <div id="buttons-container">
-        <button id="downloadBtn">Download</̥button>
-        <button id="backBtn">Back</button>
-      </div>
+<div id="myModal" class="modal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div id="modal-content-container">
+    <img class="modal-content" id="img01">
+    <div id="buttons-container">
+      <button id="downloadBtn">Download</button>
+      <button id="backBtn" onclick="closeModal()">Back</button>
     </div>
-    <div id="caption"></div>
   </div>
+  <div id="caption"></div>
+</div>
+
 </body>
 </html>
