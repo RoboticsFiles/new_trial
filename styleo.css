@@ -148,7 +148,7 @@ header {
 
 
 .modal-content {  /*img*/
-  width: 60%; 
+  width: 95%; 
 }
 
 #buttons-container {
@@ -157,7 +157,7 @@ header {
   flex-direction: row;
   justify-content: space-between;
   width: 30%;
-  height: 8%;
+  height: 15%;
 }
 
 .two-btns{
@@ -169,7 +169,7 @@ header {
 #backBtn {
   border: none;
   padding: 10px 20px;
-  font-size: 16px;
+  font-size: 40px;
   border-radius: 5px;
   cursor: pointer;
 }
