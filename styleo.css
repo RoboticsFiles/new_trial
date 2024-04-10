@@ -130,38 +130,39 @@ header {
 }
 
 /* Modal Styles */
-.modal {
-  display: none; /* Hidden by default */
+
+ .modal {
+  display: none; 
   position: fixed;
   z-index: 1000;
   left: 0;
-  top: 0;
-  width: 100%;
+  top: 138px;
+  right: 0;
+  bottom: 0;
   height: 100%;
-  overflow: auto;
   background-color: rgba(0,0,0,0.9);
-  
+
+  margin-top: 50px;
+
 }
 
-.modal-content-container {
+
+.modal-content {  /*img*/
+  width: 60%; 
+}
+
+#buttons-container {
+  margin-top: 5%;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-
-.modal-content {
-  margin-top: 20px; /* Adjust as needed */
-  max-width: 80%; /* Adjust as needed */
-  max-height: 80%; /* Adjust as needed */
-}
-
-.buttons-container {
-  margin-top: 20px; /* Adjust as needed */
-  display: flex;
+  flex-direction: row;
   justify-content: space-between;
-  width: 80%;
+  width: 30%;
+  height: 8%;
+}
+
+.two-btns{
+  width: 40%;
+  height: 100%;
 }
 
 #downloadBtn,
